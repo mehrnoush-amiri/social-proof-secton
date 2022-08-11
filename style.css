@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ font-size: 15 px;   
+ background-image:
+ url("../images/bg-pattern-bottom-desktop.svg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position-y: top;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "header . header2"
+    "recommend1 recommend2 recommend3";
+    column-gap: 25px;
+    place-items: center;
+    align-content: space-between;
+    margin: 95px 130px;
+    height: calc(100vh - 190px);
+}
+
+.cells{
+    /* background-color: aqua; */
+}
+.third-cell,.forth-cell,.fifth-cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(300, 43%, 22%);
+    color: snow;
+    height: 200px;
+    border-radius: 7px;
+    place-self: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+/* img{
+    width: 50px;
+    height: 50px;
+    
+} */
+
+.first-cell{
+    grid-area: header;
+}
+.second-cell{
+    grid-area: header2;
+}
+.third-cell{ 
+    grid-area: recommend1;
+    transform: translateY(-30px);
+}
+.forth-cell{
+    grid-area: recommend2;
+    transform: translateY(-15px);
+}
+.fifth-cell{
+    grid-area: recommend3;
+}
